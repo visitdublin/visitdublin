@@ -317,6 +317,37 @@ body {
     height: 60%;
 }
 
+.redirect {
+    display: none;
+}
+
 ::-webkit-scrollbar {
     display: none;
+}
+
+@media (max-width: 800px) {
+    .calendar {
+        display: none;
+    }
+
+    body {
+        background-image: none;
+        background-color: var(--other);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .redirect {
+        margin-top: 50%;
+        margin-inline: 40px;
+        display: block;
+        color: white;
+    }
+
+    .overlay,
+    .outer-circle {
+        display: none;
+    }
+
 }
