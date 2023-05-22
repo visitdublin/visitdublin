@@ -1,0 +1,322 @@
+body {
+    margin: 0px;
+    user-select: none;
+    background-image: url('https://images.pexels.com/photos/3566187/pexels-photo-3566187.jpeg?cs=srgb&dl=pexels-luciann-photography-3566187.jpg&fm=jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+:root {
+    --main: rgb(32, 21, 0);
+    --other: rgb(24, 37, 58);
+}
+
+.overlay {
+    position: absolute;
+    z-index: -100;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(rgba(255, 200, 0, 0.3), rgb(10, 10, 200, 0.3))
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: var(--main);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header img {
+    width: 16%;
+    filter: blur(0.5);
+    background-color: white;
+    padding: 5px;
+    border-radius: 4px;
+    padding-right: 10px;
+}
+
+.appbar {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.outer-circle {
+    position: absolute;
+    border-radius: 100%;
+    width: 100vw;
+    height: 100vw;
+    left: 50%;
+    bottom: -50%;
+    background-color: rgba(255, 166, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px black;
+}
+
+.inner-circle {
+    position: absolute;
+    border-radius: 100%;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 60, 255, 0.3);
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-title {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0px;
+    margin-right: 50%;
+}
+
+.main-sub {
+    color: white;
+    margin-right: 50%;
+    margin-top: 30px;
+}
+
+.learn-more-btn {
+    margin-right: 50%;
+    background-color: var(--other);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 4px;
+    padding-inline: 25px;
+    margin-top: 40px;
+    transition: 100ms;
+}
+
+.learn-more-btn:hover {
+    margin-right: 50%;
+    background-color: rgb(14, 27, 48);
+    padding: 15px;
+    padding-inline: 35px;
+    margin-top: 30px;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.learn-more-btn p {
+    color: white;
+}
+
+.learn-more-btn img {
+    filter: invert(1);
+    margin-left: 10px;
+    width: 30px;
+}
+
+.calendar {
+    position: absolute;
+    width: 20%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.date {
+    margin: 0px;
+    height: 100%;
+    width: 90%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: large;
+    transition: 100ms;
+    font-weight: 500;
+}
+
+.date:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 100ms;
+}
+
+.date span {
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.overlay-it {
+    position: absolute;
+    z-index: -100;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(rgba(155, 100, 0, 0.5), rgb(10, 10, 200, 0.3)), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.stages {
+    position: absolute;
+    width: 16%;
+    height: 90%;
+    top: 5%;
+    left: 4%;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.scrolling-content {
+    position: absolute;
+    height: 100%;
+    width: 76%;
+    left: 24%;
+    overflow-y: scroll;
+}
+
+.content-wrapper {
+    width: 100%;
+    margin-left: 10%;
+    height: 80%;
+    margin-bottom: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content-title {
+    color: white;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.content-infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content-infos img {
+    width: 40%;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.content-infos div {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    color: white;
+    display: flex;
+    line-height: 30px;
+    height: 60%;
+}
+
+.content-infos div p {
+    width: 90%;
+    color: white;
+    display: flex;
+    line-height: 30px;
+    font-size: large;
+}
+
+.content-subtitle {
+    color: rgb(212, 212, 212);
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.spacer {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.stages-title {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.stages-int {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stage-pair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+}
+
+.stage-dot {
+    background-color: rgb(13, 37, 80);
+    width: 22.5%;
+    height: 40%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    transition: 100ms;
+}
+
+.stage-dot:hover {
+    background-color: rgb(3, 27, 70);
+    width: 24%;
+    height: 50%;
+    margin-bottom: 12px;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.stage-btwn {
+    background-color: gray;
+    width: 5px;
+    height: 60%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
